@@ -3,6 +3,7 @@ import { Button, Container, Row, Col} from 'react-bootstrap'
 import { useRef, useState } from 'react'
 import Food from './components/Food'
 import data from './models/foods'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -21,9 +22,10 @@ function App() {
     <>
     <Container>
       <h1 className="mt-5 text-center">Menu</h1>
-      <div className="text-right">
-        <Button variant="secondary" onClick={handleClick} ref={buttonAdd}>+</Button>
+      <div className="text-end">
+        <Button variant="secondary" onClick={handleClick} ref={buttonAdd} className="rounded-circle mr-4" >+</Button>
       </div>
+      <div className="my-3">
       <Row>
         {
           foods.map((food, i) => {
@@ -35,6 +37,7 @@ function App() {
           })
         } 
       </Row>
+      </div>
     </Container>
     </>
   )

@@ -6,7 +6,7 @@ const Food = ({food}) => {
     
       <Card>
         <Card.Title>{food.name}</Card.Title>
-          <Image src={food.image} alt={food.name} rounded/>
+          <Image src={food.image} alt={food.name} rounded className="w-100" />
       </Card>
 
   )
